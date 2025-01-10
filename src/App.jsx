@@ -4,19 +4,42 @@ import NavBar from "./component/navbar/NavBar";
 import AddCoffeeForm from "./component/form/AddCoffeeForm";
 import Footer from "./component/footer/Footer";
 import Update from "./page/Update";
+import LoginPage from "./page/LoginPage";
+import Register from "./page/RegisterPage";
+import Users from "./page/Users";
+import { ToastContainer, } from 'react-toastify';
+import CoffeeArticle from "./page/CoffeeArticle";
+import Product from "./component/product/Product";
+// import coffeesection from "../src/component/product/coffeesection"
 
 function App() {
   return (
     <BrowserRouter>
-      {/* NavBar for all components */}
-      <NavBar />
+     <ToastContainer />
       <Routes>
-        <Route path="/" element={<Layout />} />
-        <Route path="/AddCoffeeForm" element={<AddCoffeeForm />} />
-        {/* Removed loader from the Route */}
-        <Route path="/Update/:id" element={<Update />} />
+        {/* LoginPage without NavBar and Footer */}
+        <Route path="/Login" element={<LoginPage />} />
+        <Route path="/Register" element={<Register/>} />
+
+        {/* Other pages with NavBar and Footer */}
+        <Route
+          path="*"
+          element={
+            <>
+              <NavBar />
+              <Routes>
+                <Route path="/" element={<Layout />} />
+                <Route path="/AddCoffeeForm" element={<AddCoffeeForm />} />
+                <Route path="/Update/:id" element={<Update />} />
+                <Route path="/User" element={<Users/>} />
+                <Route path="/articale" element={<CoffeeArticle/>}/>
+                <Route path="/coffeesection" element={<Product/>} />
+              </Routes>
+              <Footer />
+            </>
+          }
+        />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }

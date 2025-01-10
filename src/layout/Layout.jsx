@@ -2,6 +2,7 @@ import Banner from "../component/banner/Banner"
 import Cetagory from "../component/category/Cetagory"
 import ProductSection from "../component/product/Product"
 import InstagramSection from "../page/InstagramSection"
+// import LoginPage from "../page/LoginPage"
 
 
 function Layout() {
@@ -11,6 +12,7 @@ function Layout() {
         <Cetagory/>
         <ProductSection/>
         <InstagramSection/>
+        {/* <LoginPage/> */}
      
     </>
   )

@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/image/logo1.png"
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
-      <footer className="bg-gray-100 text-gray-700 p-8  mt-5 border-t border-gray-300">
+      <footer className="bg-gray-100 text-gray-700 p-8 border-t border-gray-300">
         <div className="container mx-auto px-4 flex items-center justify-center ">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center  ">
             {/* Espresso Emporium Section */}
@@ -89,7 +90,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="text-center w-full bg-[#4b2a2a]  text-sm p-4 text-gray-500">
-        <p>Copyright © Espresso Emporium | All Rights Reserved</p>
+        <p>Copyright © Espresso Emporium | All Rights Reserved by <Link to={"https://www.facebook.com/md.saiful.islam.104197"} className=" text-blue-600 hover:border-b font-semibold">SAIFUL ISLAM</Link></p>
       </div>
     </>
   );
